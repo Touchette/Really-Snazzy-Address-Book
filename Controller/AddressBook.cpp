@@ -15,7 +15,7 @@ void AddressBook::add(Entry *entry) {
 
 void AddressBook::remove(Entry *entry) {
     int i;
-    std::vector<Entry*>::iterator it = std::find(entries.begin(), entries.end(), entry);
+    std::list<Entry*>::iterator it = std::find(entries.begin(), entries.end(), entry);
     if (it != entries.end()) {
         printf("removing entry with last name \"%s\"\n", entry->getFieldData("lastname").c_str());
         entries.erase(it);
@@ -27,12 +27,12 @@ void AddressBook::remove(Entry *entry) {
 
 // Printing and Serializing
 void AddressBook::printEntries() {
-    std::vector<Entry*>::iterator it = entries.begin();
+    std::list<Entry*>::iterator it = entries.begin();
     for (it; it != entries.end(); ++it) {
-        printf("%s\n", it[0]->format().c_str());
+        printf("%s\n", (*it)->format().c_str());
     }
 }
 
-std::vector<Entry*> AddressBook::retEntries() {
+std::list<Entry*> AddressBook::retEntries() {
     return entries;
 }

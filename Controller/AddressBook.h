@@ -1,12 +1,12 @@
 #ifndef ADDRESSBOOK
 #define ADDRESSBOOK
 #include <stdlib.h>
-#include <vector>
+#include <list>
 #include "Entry.h"
 
 class AddressBook {
   public:
-  	std::vector<Entry*> entries;
+  	std::list<Entry*> entries;
 
   	// Constructor and Destructor
   	AddressBook() { };
@@ -22,10 +22,10 @@ class AddressBook {
 
   	// Printing and Serializing
   	void printEntries();
-  	std::vector<Entry*> retEntries();
+  	std::list<Entry*> retEntries();
 
   private:
-  	std::vector<const char*> *fields; // if this is larger than one, adding uses
+  	std::list<std::string> *fields; // if this is larger than one, adding uses
 };
 
 #endif
