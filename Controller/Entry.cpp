@@ -20,7 +20,6 @@ void Entry::addField(std::string key, std::string value) {
 
 void Entry::changeField(std::string key, std::string value) {
 	if (fields.count(key) > 0) {
-		printf("test");
 		fields[key] = value;
 	}
 	else {
@@ -32,11 +31,15 @@ void Entry::changeField(std::string key, std::string value) {
 // Getting data
 std::string Entry::getFieldData(std::string key) {
 	if (fields.count(key) > 0) {
-		printf("found key with value \"%s\"\n", fields[key].c_str());
 		return fields[key];
+	}
+	else {
+		return NULL;
 	}
 }
 
 std::string Entry::format() {
-	return ("%s %s,. %s\n", getFieldData("lastname"), getFieldData("firstname"), getFieldData("address"));
+	char s[256];
+	sprintf(s, "%s %s, %s", getFieldData("lastname").c_str(), getFieldData("firstname").c_str(), getFieldData("address").c_str());
+	return s;
 }

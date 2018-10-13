@@ -29,7 +29,7 @@ void AddressBook::remove(Entry *entry) {
 void AddressBook::printEntries() {
     std::vector<Entry*>::iterator it = entries.begin();
     for (it; it != entries.end(); ++it) {
-        printf("%p", *it);
+        printf("%s\n", it[0]->format().c_str());
     }
 }
 
