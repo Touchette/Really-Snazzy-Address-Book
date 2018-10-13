@@ -40,6 +40,9 @@ std::string Entry::getFieldData(std::string key) {
 
 std::string Entry::format() {
 	char s[256];
-	sprintf(s, "%s %s, %s", getFieldData("lastname").c_str(), getFieldData("firstname").c_str(), getFieldData("address").c_str());
+	sprintf(s, "%s %s, %s",
+		getFieldData("lastname").c_str(),
+		getFieldData("firstname").c_str(),
+		getFieldData("address").c_str());
 	return s;
 }
