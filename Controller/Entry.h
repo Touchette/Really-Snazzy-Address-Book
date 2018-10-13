@@ -1,8 +1,8 @@
 #ifndef ENTRY
 #define ENTRY
 #include <stdlib.h>
-#include <std::string>
 #include <map>
+#include <string>
 #include "Entry.h"
 
 class Entry {

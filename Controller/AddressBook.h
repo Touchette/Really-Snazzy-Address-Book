@@ -2,12 +2,11 @@
 #define ADDRESSBOOK
 #include <stdlib.h>
 #include <vector>
-#include <string>
 #include "Entry.h"
 
 class AddressBook {
   public:
-  	std::vector<Entry*> *entries;
+  	std::vector<Entry*> entries;
 
   	// Constructor and Destructor
   	AddressBook() { };
@@ -26,7 +25,7 @@ class AddressBook {
   	std::vector<Entry*> retEntries();
 
   private:
-  	std::vector<std::string> *fields; // if this is larger than one, adding uses
+  	std::vector<const char*> *fields; // if this is larger than one, adding uses
 };
 
 #endif

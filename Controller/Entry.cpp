@@ -32,7 +32,7 @@ void Entry::changeField(std::string key, std::string value) {
 // Getting data
 std::string Entry::getFieldData(std::string key) {
 	if (fields.count(key) > 0) {
-		printf("found key with value \"%s\"\n", fields[key]);
+		printf("found key with value \"%s\"\n", fields[key].c_str());
 		return fields[key];
 	}
 }
