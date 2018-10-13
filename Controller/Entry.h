@@ -1,12 +1,13 @@
 #ifndef ENTRY
 #define ENTRY
 #include <stdlib.h>
+#include <std::string>
 #include <map>
 #include "Entry.h"
 
 class Entry {
   public:
-  	std::map<const char*, const char*> *fields;
+  	std::map<std::string, std::string> fields;
 
   	// Constructor and Destructor
   	Entry();
@@ -27,12 +28,12 @@ class Entry {
   	*/
 
   	// Modifying and Adding data
-  	void addField(const char* key, const char* value);
-  	void changeField(const char* key, const char* value);
+  	void addField(std::string key, std::string value);
+  	void changeField(std::string key, std::string value);
 
   	// Getting data
-  	const char* getFieldData(const char* key);
-  	const char* format();
+  	std::string getFieldData(std::string key);
+  	std::string format();
 };
 
 #endif

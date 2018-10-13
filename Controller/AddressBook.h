@@ -2,6 +2,7 @@
 #define ADDRESSBOOK
 #include <stdlib.h>
 #include <vector>
+#include <string>
 #include "Entry.h"
 
 class AddressBook {
@@ -25,7 +26,7 @@ class AddressBook {
   	std::vector<Entry*> retEntries();
 
   private:
-  	std::vector<const char*> *fields; // if this is larger than one, adding uses
+  	std::vector<std::string> *fields; // if this is larger than one, adding uses
 };
 
 #endif
