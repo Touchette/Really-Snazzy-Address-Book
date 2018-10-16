@@ -7,10 +7,10 @@
 
 // Constructor
 Entry::Entry() {
-	fields["firstname"] = "NULL";
-	fields["lastname"] = "NULL";
-	fields["zipcode"] = "NULL";
-	fields["address"] = "NULL";
+	fields["firstname"] = "";
+	fields["lastname"] = "";
+	fields["zipcode"] = "";
+	fields["address"] = "";
 }
 
 // Modifying and Adding data
@@ -24,12 +24,15 @@ void Entry::changeField(std::string key, std::string value) {
 	}
 	else {
 		printf("entry not found, adding new key\n");
-		addField(key, value);
 	}
 }
 
+void Entry::removeField(std::string key) {
+	fields.erase(key);
+}
+
 // Getting data
-std::string Entry::getFieldData(std::string key) {
+std::string Entry::getFieldValue(std::string key) {
 	if (fields.count(key) > 0) {
 		return fields[key];
 	}
@@ -41,8 +44,8 @@ std::string Entry::getFieldData(std::string key) {
 std::string Entry::format() {
 	char s[256];
 	sprintf(s, "%s %s, %s",
-		getFieldData("lastname").c_str(),
-		getFieldData("firstname").c_str(),
-		getFieldData("address").c_str());
+		getFieldValue("lastname").c_str(),
+		getFieldValue("firstname").c_str(),
+		getFieldValue("address").c_str());
 	return s;
 }

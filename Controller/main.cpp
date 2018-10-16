@@ -2,6 +2,8 @@
 #include <string>
 #include "AddressBook.h"
 #include "Entry.h"
+#include "Serializer.h"
+#include "Deserializer.h"
 
 int main(int argc, char *argv[]) {
 	AddressBook ab;

@@ -1,4 +1,4 @@
-CC = g++ -std=c++11 -g -Wall -Wextra -pedantic
+CC = g++ -std=c++11 -g
 CCOPTS = -L /usr/local/lib
 
 default: AddressBook
