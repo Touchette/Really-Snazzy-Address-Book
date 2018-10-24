@@ -4,9 +4,13 @@ Very Snazzy Address Book is an Address Book application that stores contacts and
 # Installation #
 
 ### Minimum Requirements ###
-Linux/macOS
+
+Linux-based distro / macOS
+
 Intel Core 2 Duo Processor
+
 2GB RAM
+
 200 GB Disk Space
 
 ### Installation ###
