@@ -11,12 +11,13 @@ class Deserializer{
 public:
 	Deserializer();
 	~Deserializer();
-	void openFile(std::string path_string);
-	AddressBook* deserializeToBook(AddressBook* starting_book = NULL);
-	Entry* deserializeToEntry();
-    AddressBook* deserializeTabbedValues(AddressBook* starting_book = NULL);
-	void closeFile();
+	void openJSON(std::string path_string);
+	AddressBook* deserializeToBook(AddressBook* starting_book);
+	Entry* deserializeToEntry(std::string json);
+	AddressBook* deserializeTabbedValues(std::string tabbed_values, AddressBook* starting_book);
+	void closeJSON();
 private:
+	char* stringToPath(std::string path);
 	FILE* file_ptr;
 };
 
