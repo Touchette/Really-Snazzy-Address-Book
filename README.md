@@ -14,13 +14,13 @@ NOTE: If you have previously installed VerySnazzyAddressBook, you must run the u
 
 Download the compressed application file
 Move the compressed application file to where you’d like to install the application; replacing “some/path/” with the desired installation path
-- mv ClonedRepo some/path/
+- mv Really-Snazzy-Address-Book-master.zip some/path/
 Navigate to the directory containing the compressed application file; replacing “some/path/” with the path to the directory containing the cloned repo file
 - cd some/path/
-Decompress the file using tar (or your preferred decompression method)
-- tar -xvzf TeamA.tar
+Decompress the file using zip (or your preferred decompression method)
+- unzip Really-Snazzy-Address-Book-master.zip
 Navigate into the application directory
-- cd 
+- cd Really-Snazzy-Address-Book-master
 Run the installation script; when prompted for a password, enter your user password
 - ./Install.sh
 Run the application by running the “AddressBook” executable; this can be done graphically through a file browser or through the command line
