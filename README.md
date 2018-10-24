@@ -14,22 +14,22 @@ NOTE: If you have previously installed VerySnazzyAddressBook, you must run the u
 
 Download the compressed application file
 Move the compressed application file to where you’d like to install the application; replacing “some/path/” with the desired installation path
-		> mv TeamA.tgz some/path/
-Navigate to the directory containing the compressed application file; replacing “some/path/” with the path to the directory containing the TeamA.tgz file
-		> cd some/path/
-Decompress the file using tar
-		> tar -xvzf TeamA.tgz
+- mv ClonedRepo some/path/
+Navigate to the directory containing the compressed application file; replacing “some/path/” with the path to the directory containing the cloned repo file
+- cd some/path/
+Decompress the file using tar (or your preferred decompression method)
+- tar -xvzf TeamA.tar
 Navigate into the application directory
-		> cd project1/
-Run the installation script; when prompted for a password, enter your unix password
-		> ./Install.sh
+- cd 
+Run the installation script; when prompted for a password, enter your user password
+- ./Install.sh
 Run the application by running the “AddressBook” executable; this can be done graphically through a file browser or through the command line
-		> ./AddressBook
+- ./AddressBook
 
 3.	Uninstalling
 Navigate to the application directory; replacing “some/path/” with the path of the installation directory
-		> cd some/path/
+- cd some/path/
 Run the uninstall script; if prompted to confirm deletion of the AddressBook executable, type “y” then hit enter
-		> ./Uninstall.sh
+- ./Uninstall.sh
 
 
