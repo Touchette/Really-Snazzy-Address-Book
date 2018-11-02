@@ -32,7 +32,6 @@ class AddressBook {
 
   private:
 	std::list<std::string> fields; // if len(fields)>0, used by "add"
-	std::list<std::string> fields; // if this is larger than one, adding uses
 };
 
 #endif
